@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    </head>
+    <style>
+        .hii
+        {
+           color: grey;
+           font-size: 1.2rem;
+           font-weight: bold;
+           margin-bottom: 1rem;
+           text-decoration: none;
+           text-transform: uppercase;
+           transition: color 0.3s ease;
+           cursor: pointer;
+           position: relative;
+
+        }
+        main {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(black,blue);
+  overflow: hidden;
+}
+
+        .h23
+        {
+          padding-left: 10px          ;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color 0.3s ease;
+          cursor: pointer;
+          position: relative;
+        }
+        .p12{
+          padding-left: 20px;
+          color: white;
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color 0.3s ease;
+          cursor: pointer;
+          position: relative;
+        }
+        .circle-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%; /* Makes it a circle */
+      overflow: hidden;
+      border: 3px solid #333; /* Optional: adds a border */
+    }
+
+    .circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the circle */
+    }
+    .shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Put behind content */
+}
+
+.star {
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(-45deg, white, rgba(255, 255, 255, 0));
+  opacity: 0;
+  animation: shooting-star 2s linear infinite;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px) translateY(300px) rotate(45deg);
+    opacity: 0;
+  }
+}
+audio {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.mai {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  background: #111;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+
+.ab {
+  color: #00ffff;
+  font-style: italic;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.para {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Lightning effect */
+@keyframes lightning {
+  0%, 100% {
+    background-color: #111;
+    box-shadow: none;
+  }
+  50% {
+    background-color: #222;
+    box-shadow: 0 0 15px 5px #00ffff;
+  }
+}
+
+/* Apply lightning animation to the .mai section */
+.mai {
+  animation: lightning 3s infinite;
+}
+
+/* Rain effect */
+@keyframes rain {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.mai::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png') repeat;
+  animation: rain 0.5s linear infinite;
+  opacity: 0.5;
+}
+
+.ab
+{
+  padding-left: 10px;
+  color: skyblue;
+  font-style: italic;
+  font-weight: bold;
+  
+}
+.para
+{
+  font-weight: bold;
+  padding-left: 10px;
+  color: white;
+}
+    </style>
+
+
+        <header>
+            <!-- place navbar here -->
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Port<span class="hii">Folio</span></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                              <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <br>
+        <br>
+        <br>
+
+        <main>
+          <div class="shooting-stars">
+            <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+            <div class="star" style="top: 30%; left: 40%; animation-delay: 1s;"></div>
+            <div class="star" style="top: 50%; left: 60%; animation-delay: 2s;"></div>
+            <div class="star" style="top: 70%; left: 80%; animation-delay: 3s;"></div>
+            <div class="star" style="top: 90%; left: 10%; animation-delay: 4s;"></div>
+          </div>
+          
+          <div class="circle-img">
+            <img src="umairr.jpeg" alt="Circular Image">
+          </div>
+            <div class="row">
+                <div class="col-lg-6"><h2 class="h23"> Hi Umair Here </h2></div>
+                <br>
+                <p class="p12"> I'm a passioniate front & developer Expert in creating responsive layout for all screens size</p>
+                </div>
+            </div>
+        </main>
+     
+        <br>
+
+        <div class="mai">
+          <h2><span class="ab">About ME</span></h2>
+          <p class="para">
+            I'm a frontend developer doing a course from Aptech. I have 1 year of experience of this field,
+            also have expertise in UI & UX designing. I also have experience in social media marketing,
+            working for the last 3 years in a call center as a sales executive. I also have basic
+            knowledge of SEO! I can create logos as well.
+          </p>
+        
+          <!-- Robot and Thought Bubble Container -->
+          <div style="position: relative; width: 100%; text-align: center; margin-top: 40px;">
+        
+            <!-- Thought Bubble on the left -->
+            <div style="
+              position: absolute;
+              top: 20px;
+              left: -150px; /* Moves it to the left side of the robot */
+              transform: translateX(-50%);
+              background: white;
+              color: black;
+              padding: 10px 20px;
+              border-radius: 40px;
+              font-weight: bold;
+              font-style: italic;
+              box-shadow: 0 0 10px #00ffff;
+              white-space: nowrap;
+              z-index: 2;
+            ">
+              I'm here to develop a website for you!
+            </div>
+        
+            <!-- Thought Trail -->
+            <span style="
+              position: absolute;
+              top: 40px;
+              left: -140px; /* Aligns with the bubble */
+              width: 12px;
+              height: 12px;
+              background: white;
+              border-radius: 50%;
+              box-shadow: 0 0 5px #00ffff;
+            "></span>
+            <span style="
+              position: absolute;
+              top: 60px;
+              left: -130px;
+              width: 8px;
+              height: 8px;
+              background: white;
+              border-radius: 50%;
+              box-shadow: 0 0 3px #00ffff;
+            "></span>
+            <span style="
+              position: absolute;
+              top: 75px;
+              padding-left: 400px;
+              width: 5px;
+              height: 5px;
+              background: white;
+              border-radius: 50%;
+              box-shadow: 0 0 2px #00ffff;
+            "></span>
+        
+            <!-- 3D Robot Model -->
+            <model-viewer 
+              src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
+              alt="A 3D robot" 
+              auto-rotate 
+              camera-controls 
+              style="width: 300px; height: 300px;">
+            </model-viewer>
+          </div>
+        </div>
+        
+         
+        
+        
+      
+  
+
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
